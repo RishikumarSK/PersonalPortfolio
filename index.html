@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rishikumar S's Personal Webpage</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f2f2f2, #e6e6e6);
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .header, .footer {
+            text-align: center;
+            padding: 1rem;
+            background: #007BFF;
+            color: #fff;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+        }
+        .header img {
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border: 4px solid #fff;
+            margin-top: -60px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .header h1, .footer p {
+            margin: 0;
+        }
+        .header p {
+            font-size: 1.2rem;
+            margin-top: 0.5rem;
+        }
+        h2 {
+            color: #007BFF;
+            border-bottom: 2px solid #007BFF;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        .bio, .work, .projects {
+            margin-bottom: 1.5rem;
+        }
+        .projects button {
+            background: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 0.7rem 1.2rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.3s;
+        }
+        .projects button:hover {
+            background: #0056b3;
+            transform: scale(1.05);
+        }
+        .toggle-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out;
+        }
+        .toggle-content.active {
+            max-height: 500px;
+        }
+        .toggle-content p {
+            margin: 0.5rem 0;
+            padding: 0.5rem;
+            background: #f9f9f9;
+            border-left: 4px solid #007BFF;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="profile.jpg" alt="Rishikumar S">
+        <h1>Rishikumar S</h1>
+        <p>MCA Graduate | Tech Enthusiast</p>
+    </div>
+    <div class="container">
+        <div class="bio">
+            <h2>Bio</h2>
+            <p>Completed MCA and BCA degrees. Passionate about technology and its applications.</p>
+        </div>
+        <div class="work">
+            <h2>Work Experience</h2>
+            <p>Currently working at Techknots.</p>
+        </div>
+        <div class="projects">
+            <h2>Projects</h2>
+            <button class="btn" onclick="toggleProjectDetails()">Show/Hide Project Details</button>
+            <div id="project-details" class="toggle-content">
+                <p><strong>Voting System:</strong> Developed as an undergraduate project.</p>
+                <p><strong>De-Fi Farming:</strong> Special visitor project during the first year of post-graduation and final year project.</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p>&copy; 2024 Rishikumar S</p>
+    </div>
+
+    <script>
+        function toggleProjectDetails() {
+            var details = document.getElementById('project-details');
+            if (details.classList.contains('active')) {
+                details.classList.remove('active');
+            } else {
+                details.classList.add('active');
+            }
+        }
+    </script>
+</body>
+</html>
